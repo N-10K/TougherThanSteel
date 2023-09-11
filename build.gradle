@@ -10,7 +10,7 @@ project.ext.modName = "Tougher Than Steel" // The display name of your mod.
 project.ext.modVersion = "1.0" // Your current builds version. Must follow the xx.xx... format.
 project.ext.gameVersion = "0.22.0" // The target game version.
 project.ext.modDescription = "WIP" // Short description of what your mod is.
-project.ext.author = "Fair" // Your name
+project.ext.author = "N10K" // Your name
 
 /**
  * When setting clientside to true, it means servers do not need this mod for clients to connect and vice versa.
