@@ -27,6 +27,7 @@ public class TougherThanSteel {
         System.out.println("Adding items...");
         ItemRegistry.registerItem("coal", new coal(), 8, true);
         ItemRegistry.registerItem("sulphur", new sulphur(), 12, true);
+        ItemRegistry.registerItem("gunpowder", new gunpowder(), 20, true);
 
 
         //ores
@@ -72,6 +73,26 @@ public class TougherThanSteel {
                         new Ingredient("coal",1)
                 }
                 )
+        );
+        Recipes.registerModRecipe(new Recipe(
+                "gunpowder",
+                2,
+                RecipeTechRegistry.WORKSTATION,
+                new Ingredient[]{
+                        new Ingredient("sulphur", 2),
+                        new Ingredient("coal",2)
+                }
+            )
+        );
+        Recipes.registerModRecipe(new Recipe(
+                "ironbomb",
+                3,
+                RecipeTechRegistry.WORKSTATION,
+                new Ingredient[]{
+                        new Ingredient("iron",9),
+                        new Ingredient("gunpowder",3)
+                }
+            )
         );
     }
 
