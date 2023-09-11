@@ -6,6 +6,9 @@ import necesse.engine.events.worldGeneration.GeneratedCaveOresEvent;
 import necesse.level.gameObject.RockObject;
 import necesse.level.gameObject.RockOreObject;
 import necesse.level.maps.biomes.forest.ForestBiome;
+import necesse.inventory.recipe.Ingredient;
+import necesse.inventory.recipe.Recipe;
+import necesse.inventory.recipe.Recipes;
 import tougherthansteel.items.*;
 import necesse.engine.modLoader.annotations.ModEntry;
 import necesse.engine.registries.*;
@@ -46,6 +49,16 @@ public class TougherThanSteel {
 
         //Recipes
         System.out.println("Adding recipes...");
+        Recipes.registerModRecipe(new Recipe(
+                "torch",
+                6,
+                RecipeTechRegistry.NONE,
+                new Ingredient[]{
+                        new Ingredient("anylog",4),
+                        new Ingredient("coal",1)
+                }
+                )
+        );
     }
 
 }
