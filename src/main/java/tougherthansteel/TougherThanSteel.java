@@ -14,6 +14,7 @@ import necesse.level.maps.biomes.swamp.SwampBiome;
 import tougherthansteel.items.*;
 import necesse.engine.modLoader.annotations.ModEntry;
 import necesse.engine.registries.*;
+import necesse.inventory.item.toolItem.projectileToolItem.throwToolItem.IronBombToolItem;
 
 import java.awt.*;
 
@@ -89,7 +90,7 @@ public class TougherThanSteel {
                 3,
                 RecipeTechRegistry.WORKSTATION,
                 new Ingredient[]{
-                        new Ingredient("iron",9),
+                        new Ingredient("ironbar",9),
                         new Ingredient("gunpowder",3)
                 }
             )
