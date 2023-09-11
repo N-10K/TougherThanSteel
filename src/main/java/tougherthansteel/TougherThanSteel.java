@@ -47,7 +47,7 @@ public class TougherThanSteel {
                 }
                 if (event.level.biome instanceof SwampBiome) {
                     event.caveGeneration.generateOreVeins(1, 4,12, coalOre);
-                    event.caveGeneration.generateOreVeins(1, 2,6, sulphurOre);
+                    event.caveGeneration.generateOreVeins(1, 2,8, sulphurOre);
                 }
             }
         });
