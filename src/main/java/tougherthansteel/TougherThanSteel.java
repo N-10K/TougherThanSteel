@@ -14,28 +14,28 @@ import necesse.level.maps.biomes.swamp.SwampBiome;
 import tougherthansteel.items.*;
 import necesse.engine.modLoader.annotations.ModEntry;
 import necesse.engine.registries.*;
-import necesse.inventory.item.toolItem.projectileToolItem.throwToolItem.IronBombToolItem;
 
 import java.awt.*;
 
 @ModEntry
 public class TougherThanSteel {
+    
 
     public void init() {
         System.out.println("Initializing Tougher Than Steel");
 
         //items
         System.out.println("Adding items...");
-        ItemRegistry.registerItem("coal", new coal(), 8, true);
-        ItemRegistry.registerItem("sulphur", new sulphur(), 12, true);
-        ItemRegistry.registerItem("gunpowder", new gunpowder(), 20, true);
-
+        ItemRegistry.registerItem("coal", new Coal(), 8, true);
+        ItemRegistry.registerItem("sulphur", new Sulphur(), 12, true);
+        ItemRegistry.registerItem("gunpowder", new Gunpowder(), 20, true);
 
         //ores
         System.out.println("Adding ores...");
-        int coalOre=ObjectRegistry.registerObject("tttcoalore" , new RockOreObject((RockObject)ObjectRegistry.getObject("rock"), "oremask", "coalore", new Color(10, 10, 10), "coal"), 0.0F, true);
-        int sulphurOre=ObjectRegistry.registerObject("tttsulphurore" , new RockOreObject((RockObject)ObjectRegistry.getObject("rock"), "oremask", "sulphurore", new Color(10, 10, 10), "sulphur"), 0.0F, true);
+        int coalOre=ObjectRegistry.registerObject("coalore" , new RockOreObject((RockObject)ObjectRegistry.getObject("rock"), "oremask", "coalore", new Color(10, 10, 10), "coal"), 0.0F, true);
+        int sulphurOre=ObjectRegistry.registerObject("sulphurore" , new RockOreObject((RockObject)ObjectRegistry.getObject("rock"), "oremask", "sulphurore", new Color(10, 10, 10), "sulphur"), 0.0F, true);
         //ore generation
+        System.out.println("Adding ore generation...");
         GameEvents.addListener(GeneratedCaveOresEvent.class, new GameEventListener<GeneratedCaveOresEvent>() {
             @Override
             public void onEvent(GeneratedCaveOresEvent event) {
@@ -63,6 +63,7 @@ public class TougherThanSteel {
     public void postInit() {
         System.out.println("Tougher Than Steel initialized");
 
+        System.out.println("Running post init operations...");
         //Recipes
         System.out.println("Adding recipes...");
         Recipes.registerModRecipe(new Recipe(

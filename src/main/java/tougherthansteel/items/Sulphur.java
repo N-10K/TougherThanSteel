@@ -2,9 +2,9 @@ package tougherthansteel.items;
 
 import necesse.inventory.item.matItem.MatItem;
 
-public class coal extends MatItem {
+public class Sulphur extends MatItem {
 
-    public coal() {
+    public Sulphur() {
         super(100);
     }
 
